@@ -5,8 +5,6 @@ import os
 
 import numpy as np
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
-from sklearn.model_selection import train_test_split
 
 atr_info = """
 #### 
@@ -52,8 +50,8 @@ def load_model(modelos):
 
 def run_ml_app():
 	st.subheader("Área de predição usando Machine Learning")
-	log_red = load_model("C:/Users/carol/Documents/GitHub/Diabetes/modelos/logistic_regression_model_diabetes.pkl")
-	dec_tree = load_model("C:/Users/carol/Documents/GitHub/Diabetes/modelos/decision_tree_model_diabetes.pkl")
+	log_red = load_model("modelos/logistic_regression_model_diabetes.pkl")
+	dec_tree = load_model("modelos/decision_tree_model_diabetes.pkl")
 
 	with st.expander("Informação dos Atributos"):
 		st.markdown(atr_info)

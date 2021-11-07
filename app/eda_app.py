@@ -17,10 +17,10 @@ def load_data(data):
 
 def run_eda_app():
 	st.subheader("Análise Exploratória dos Dados ")
-	# df = pd.read_csv("C:/Users/carol/Documents/GitHub/Diabetes/data/diabetes_data_upload.csv")
-	df = load_data("C:/Users/carol/Documents/GitHub/Diabetes/data/diabetes_data_upload.csv")
-	freq_df = load_data("C:/Users/carol/Documents/GitHub/Diabetes/data/freqdist_of_age_data.csv")
-	df_encoded = load_data("C:/Users/carol/Documents/GitHub/Diabetes/data/diabetes_data_upload_clean.csv")
+	# df = pd.read_csv("data/diabetes_data_upload.csv")
+	df = load_data("data/diabetes_data_upload.csv")
+	freq_df = load_data("data/freqdist_of_age_data.csv")
+	df_encoded = load_data("data/diabetes_data_upload_clean.csv")
 
 	submenu = st.sidebar.selectbox("EDA", ["Descritivo", "Gráficos"])
 	if submenu == "Descritivo":
