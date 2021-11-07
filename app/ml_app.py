@@ -140,19 +140,4 @@ def run_ml_app():
 			st.write("Score da Probabilidade da Predição")
 			st.json(pred_probability_score)
 
-		st.subheader("Usando Árvore de Decisão")
-		prediction = dec_tree.predict(single_sample)
-
-		pred_prob = dec_tree.predict_proba(single_sample) #probabilidade
-
-		# st.write(prediction)
-		if prediction == 1:
-			st.warning("Risco Positivo para Diabetes - {}".format(prediction[0]))
-			pred_probability_score = {"Chance de ser negativo":pred_prob[0][0]*100,"Chance de ser positivo":pred_prob[0][1]*100}
-			st.write("Score da Probabilidade da Predição")
-			st.json(pred_probability_score)
-		else:
-			st.success("Risco Negativo para Diabetes - {}".format(prediction[0]))
-			pred_probability_score = {"Chance de ser negativo":pred_prob[0][0]*100,"Chance de ser positivo":pred_prob[0][1]*100}
-			st.write("Score da Probabilidade da Predição")
-			st.json(pred_probability_score)
+	
